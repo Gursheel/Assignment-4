@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    position: fixed;
+    top: 0px;
+    background-color: #e76f51;
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 1;
+}
+
+h1 {
+    color: white;
+    font-weight: bolder;
+    font-variant: small-caps;
+    font-style: italic;
+    margin-top: 10px;
+
+}
+
+li {
+    margin: 5px;
+}
+
+a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    padding: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    margin: 15px;
+
+}
+
+a:hover {
+    background-color: #f9844a;
+
+}
+
+.head {
+    width: 80%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+/* CATEGORIES */
+#container {
+    width: 95vw;
+    position: relative;
+    top: 50px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: space-evenly;
+
+}
+
+.items {
+    height: 140px;
+    width: 120px;
+    background-color: transparent;
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: 200ms;
+
+}
+
+.items img {
+    height: 80%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.items:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.title {
+    background-color: #023047;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* SLIDER BOX*/
+
+#carousel {
+    width: 90vw;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin: 90px auto;
+    background-image: url(https://media.istockphoto.com/photos/make-up-cosmetics-products-against-pink-color-background-picture-id1221677097?b=1&k=20&m=1221677097&s=170667a&w=0&h=F53wAlLL7Q8syWNmaJq7c5afMzOFOdPY5aPh1H3bcpM=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: slider 15s infinite linear;
+    animation-timing-function: ease-in-out;
+
+
+}
+
+@keyframes slider {
+    0% {
+        background-image: url(https://media.istockphoto.com/photos/make-up-cosmetics-products-against-pink-color-background-picture-id1221677097?b=1&k=20&m=1221677097&s=170667a&w=0&h=F53wAlLL7Q8syWNmaJq7c5afMzOFOdPY5aPh1H3bcpM=);
+    }
+
+    25% {
+        background-image: url(https://images.unsplash.com/photo-1558108545-a0f86eda7d55?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvc21ldGljJTIwYnJhbmRzfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)
+    }
+
+    50% {
+        background-image: url(https://images.unsplash.com/photo-1583784561126-c18e59057f3b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvc21ldGljfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)
+    }
+
+    75% {
+        background-image: url(https://images.unsplash.com/photo-1631214524085-17874764a0e5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGNvc21ldGljJTIwYnJhbmRzfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    }
+
+    100% {
+        background-image: url(https://images.unsplash.com/photo-1605648511528-fa48bdb09d95?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGNvc21ldGljJTIwYnJhbmRzfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    }
+
+
+}
+
+/* BRANDS */
+
+section {
+    margin: 30px auto;
+    height: 30%;
+    width: 70%;
+}
+
+h2 {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 34px;
+    text-align: center;
+    background-color: #ced4da;
+    color: #14213d;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 5px auto;
+    width: 100%;
+}
+
+#card {
+    width: 70vw;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    grid-auto-rows: 230px;
+    padding: 5px;
+
+}
+
+#card div {
+    width: 90%;
+    border: 1px solid#ccc;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+#card div img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CONTACT US*/
+#contact {
+    margin: 40px auto;
+    background-image: url(https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXR5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+
+}
+
+#contact h2 {
+    background-color: #343a40;
+    color: white;
+    text-transform: capitalize;
+}
+
+#content {
+    font-size: 30px;
+    text-align: center;
+    background-color: #f8edeb;
+    font-family: cursive;
+}
+
+#form {
+    margin: 20px auto;
+    background-color: transparent;
+    padding: 20px;
+    display: grid;
+
+}
+
+#form input {
+    font-size: 16px;
+    width: 100%;
+    margin: 5px;
+    padding: 3px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #6c757d;
+
+}
+
+textarea {
+    margin: 5px;
+    width: 100%;
+    padding: 2px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #6c757d;
+    font-size: 16px;
+}
+
+button {
+    margin: 20px auto;
+    font-size: 20px;
+    background-color: #22223b;
+    border: 1px solid #22223b;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    transition: all 300ms;
+
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:1200px) {
+
+    nav,
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #container {
+        top: 240px;
+    }
+
+    #carousel {
+        margin-top: 270px;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    #contact {
+        font-size: 20px;
+    }
+
+    #content {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 2px;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    section h2 {
+        font-size: 22px;
+    }
+
+}
+
+@media screen and (max-width:410px) {
+
+    section h2 {
+        font-size: 18px;
+    }
+
+    .items,
+    .items img {
+        width: 240px;
+
+    }
+
+}
+
+@media screen and (max-width:350px) {
+    #card {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+    }
+
+    section h2 {
+        font-size: 16px;
+    }
+
+}
